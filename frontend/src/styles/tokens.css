@@ -1,0 +1,91 @@
+/* ==========================================================================
+   LifeOS Design Tokens
+   Concept: "Control Room" — a calm instrument panel for your life, not a
+   chirpy SaaS dashboard. Inkwell base, a single warm signal accent (amber,
+   like a desk-lamp glow) for anything that wants attention, and a cool
+   teal for secondary/positive signal. Monospace is used sparingly for
+   numbers and timestamps, like a tracking instrument readout.
+   ========================================================================== */
+
+:root {
+  /* --- Brand palette (fixed across themes) --- */
+  --signal-amber: #f5a623;
+  --signal-amber-soft: #f5a62322;
+  --signal-teal: #2dd4bf;
+  --signal-teal-soft: #2dd4bf22;
+  --signal-rose: #fb7185;
+  --signal-rose-soft: #fb718522;
+  --signal-violet: #a78bfa;
+  --signal-violet-soft: #a78bfa22;
+
+  /* --- Type --- */
+  --font-display: "Fraunces", "Iowan Old Style", ui-serif, Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 6px 20px -4px rgba(0,0,0,0.16);
+  --shadow-lg: 0 16px 48px -8px rgba(0,0,0,0.24);
+
+  --transition-fast: 140ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Light theme: "Paper & Lamplight" --- */
+[data-theme="light"] {
+  --bg-base: #f7f5f0;
+  --bg-raised: #ffffff;
+  --bg-sunken: #eeebe3;
+  --bg-overlay: rgba(28, 25, 20, 0.5);
+
+  --border-subtle: #e4e0d6;
+  --border-strong: #cfc9ba;
+
+  --text-primary: #1c1914;
+  --text-secondary: #5c5648;
+  --text-tertiary: #8a8372;
+  --text-on-accent: #1c1914;
+
+  --accent: var(--signal-amber);
+  --accent-soft: var(--signal-amber-soft);
+  --accent-contrast: #1c1914;
+
+  --positive: #1a8f6b;
+  --positive-soft: #1a8f6b1a;
+  --warning: var(--signal-amber);
+  --warning-soft: var(--signal-amber-soft);
+  --danger: #d4453a;
+  --danger-soft: #d4453a1a;
+}
+
+/* --- Dark theme: "Night Watch" --- */
+[data-theme="dark"] {
+  --bg-base: #14131a;
+  --bg-raised: #1c1b24;
+  --bg-sunken: #0e0d12;
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  --border-subtle: #2a2832;
+  --border-strong: #3a3744;
+
+  --text-primary: #f2f0ea;
+  --text-secondary: #b3afc2;
+  --text-tertiary: #7a7689;
+  --text-on-accent: #14131a;
+
+  --accent: var(--signal-amber);
+  --accent-soft: var(--signal-amber-soft);
+  --accent-contrast: #14131a;
+
+  --positive: #34d399;
+  --positive-soft: #34d3991f;
+  --warning: var(--signal-amber);
+  --warning-soft: var(--signal-amber-soft);
+  --danger: #fb7185;
+  --danger-soft: #fb718522;
+}

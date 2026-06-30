@@ -1,0 +1,108 @@
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0 12px;
+  min-width: 220px;
+  color: var(--text-tertiary);
+}
+.search-input input {
+  background: transparent;
+  border: none;
+  padding: 9px 0;
+}
+.search-input input:focus { outline: none; background: transparent; }
+
+.filter-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-chip {
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+.filter-chip:hover { border-color: var(--border-strong); }
+.filter-chip-active {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  border-color: var(--accent);
+}
+
+/* Goal card */
+.goal-card { display: flex; flex-direction: column; gap: 10px; position: relative; }
+.goal-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.goal-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.goal-card-menu-wrap { position: relative; }
+.goal-card-menu {
+  position: absolute;
+  right: 0; top: calc(100% + 4px);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  min-width: 140px;
+  z-index: 15;
+  overflow: hidden;
+}
+.goal-card-menu button {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 9px 12px;
+  background: transparent; border: none;
+  font-size: 13px; color: var(--text-primary); text-align: left;
+}
+.goal-card-menu button:hover { background: var(--bg-sunken); }
+
+.goal-card-title { font-size: 16px; font-weight: 600; line-height: 1.3; }
+.goal-card-desc {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.goal-card-progress { margin-top: 4px; }
+.goal-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.goal-card-deadline {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; color: var(--text-tertiary);
+}
+.goal-days-left { color: var(--text-secondary); }
+
+.goal-milestones { border-top: 1px solid var(--border-subtle); padding-top: 10px; margin-top: 4px; }
+.goal-milestones-toggle {
+  background: transparent; border: none; padding: 0;
+  font-size: 12.5px; font-weight: 600; color: var(--text-secondary);
+}
+.milestone-list { list-style: none; padding: 0; margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.milestone-row {
+  display: flex; align-items: center; gap: 8px;
+  background: transparent; border: none; padding: 4px 0;
+  font-size: 13px; color: var(--text-primary); text-align: left; width: 100%;
+}
+.milestone-row svg { color: var(--text-tertiary); flex-shrink: 0; }
+.milestone-done { text-decoration: line-through; color: var(--text-tertiary); }
+
+.milestone-input-row { display: flex; gap: 8px; }
+.milestone-input-row input { flex: 1; }
+.milestone-draft-list { list-style: none; padding: 0; margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.milestone-draft-list li {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg-sunken); border-radius: var(--radius-sm);
+  padding: 7px 10px; font-size: 13px;
+}
+.milestone-draft-list button { background: transparent; border: none; color: var(--text-tertiary); display: flex; }
+.milestone-draft-list button:hover { color: var(--danger); }
+
+.modal-form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
