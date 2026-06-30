@@ -13,7 +13,11 @@ load_dotenv(BASE_DIR / ".env")
 # --- Core ---------------------------------------------------------------
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-change-me-in-production")
 DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1","lifeos-qwl5.onrender.com").split(",")
+
+ALLOWED_HOSTS = os.environ.get(
+    "DJANGO_ALLOWED_HOSTS",
+    "localhost,127.0.0.1,lifeos-qwl5.onrender.com"
+).split(",")
 
 # --- Applications --------------------------------------------------------
 INSTALLED_APPS = [
