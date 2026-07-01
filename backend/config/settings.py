@@ -13,7 +13,7 @@ load_dotenv(BASE_DIR / ".env")
 
 # --- Core ---------------------------------------------------------------
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-change-me-in-production")
-DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "False"
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "False"
 
 ALLOWED_HOSTS = os.environ.get(
     "DJANGO_ALLOWED_HOSTS",
